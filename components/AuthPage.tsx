@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { CloseIcon, GlobeIcon, PhoneIcon, LockClosedIcon, UserIcon, CalendarIcon, AtSymbolIcon } from './icons';
 import RotatingGlobe from './RotatingGlobe';
@@ -10,7 +9,7 @@ interface AuthPageProps {
   onAuthSuccess: (user: User) => void;
 }
 
-const USERS_KEY = 'ojas_users';
+const USERS_KEY = 'geosick_users';
 
 type ViewMode = 'login' | 'signup';
 
@@ -243,7 +242,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onClose, onAuthSuccess }) =>
             <div className="absolute inset-0 z-0 h-full w-full opacity-50"><RotatingGlobe /></div>
             <div className="z-10 text-center">
                 <GlobeIcon className="w-16 h-16 lg:w-20 lg:h-20 text-white mx-auto mb-4"/>
-                <h2 className="text-2xl lg:text-3xl font-bold">OJAS</h2>
+                <h2 className="text-2xl lg:text-3xl font-bold">GeoSick</h2>
                 <p className="mt-2 text-blue-200 text-sm lg:text-base">AI-Powered Environmental Health Intelligence.</p>
             </div>
         </div>
@@ -272,7 +271,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onClose, onAuthSuccess }) =>
                      {infoMessage ? (
                          <p className="text-sm text-blue-700 bg-blue-50 p-3 rounded-md mt-1 mb-6">{infoMessage}</p>
                     ) : (
-                        <p className="text-slate-500 mt-1 mb-6">Get started with OJAS's full suite of tools.</p>
+                        <p className="text-slate-500 mt-1 mb-6">Get started with GeoSick's full suite of tools.</p>
                     )}
                     {renderSignUpForm()}
                 </div>

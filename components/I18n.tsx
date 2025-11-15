@@ -15,11 +15,11 @@ const I18nContext = createContext<I18nContextType>({
 
 export const I18nProvider = ({ children }: { children: React.ReactNode }) => {
   const [language, setLanguageState] = useState(() => {
-    return localStorage.getItem('ojas_language') || 'en-US';
+    return localStorage.getItem('geosick_language') || 'en-US';
   });
 
   const setLanguage = (lang: string) => {
-    localStorage.setItem('ojas_language', lang);
+    localStorage.setItem('geosick_language', lang);
     setLanguageState(lang);
   };
 
